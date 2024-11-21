@@ -1,0 +1,41 @@
+.favourites {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 150px);
+}
+
+.favourites h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .favourites h2 {
+        font-size: 1.5em;
+    }
+
+    .cards-container {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .favourites h2 {
+        font-size: 1.3em;
+    }
+
+    .cards-container {
+        gap: 10px;
+        justify-content: center;
+    }
+}

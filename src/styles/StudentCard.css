@@ -1,0 +1,104 @@
+.student-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    max-width: 300px;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.student-card p span {
+    font-weight: bold;
+}
+
+.card-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-buttons button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1;
+    max-width: 120px;
+    text-align: center;
+}
+
+.card-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.card-buttons button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-card {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .student-card p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-buttons button {
+        flex: 1 0 100%;
+        max-width: none;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-card {
+        padding: 8px;
+    }
+
+    .student-card p {
+        font-size: 12px;
+    }
+
+    .card-buttons button {
+        padding: 5px;
+        font-size: 11px;
+    }
+}
